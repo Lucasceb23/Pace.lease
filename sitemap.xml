@@ -7,6 +7,12 @@
     <priority>1.0</priority>
   </url>
   <url>
+    <loc>https://pace.lease/distributeurs/</loc>
+    <lastmod>2026-11-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://pace.lease/articles.html</loc>
     <lastmod>2026-08-06</lastmod>
     <changefreq>weekly</changefreq>
