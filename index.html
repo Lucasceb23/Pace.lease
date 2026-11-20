@@ -1,0 +1,1037 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta name="google-site-verification" content="google06028c6cf5743f70" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Financement d'équipements pour les entreprises | Pace</title>
+<meta name="description" content="Pace finance l'équipement de votre entreprise en quelques heures : demande 100% digitale, taux compétitif, signature en ligne. Simulez votre financement gratuitement.">
+<link rel="canonical" href="https://pace.lease/">
+<meta property="og:site_name" content="Pace">
+<meta property="og:title" content="Financement d'équipements pour les entreprises | Pace">
+<meta property="og:description" content="Financement d'équipement professionnel 100% digital, réponse en quelques heures, signature en ligne.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://pace.lease/">
+<meta property="og:locale" content="fr_FR">
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="48x48" href="/favicon-48x48.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Financement d'équipements pour les entreprises | Pace">
+<meta name="twitter:description" content="Financement d'équipement professionnel 100% digital, réponse en quelques heures.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700;800&family=Geist+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #fafafa;
+    --white: #ffffff;
+    --ink: #000000;
+    --gray-900: #171717;
+    --gray-700: #444444;
+    --gray-600: #666666;
+    --gray-500: #888888;
+    --line: #eaeaea;
+    --line-2: #e2e2e2;
+    --panel: #fafafa;
+    --green: #0d9153;
+    --radius-sm: 0.5rem;
+    --radius: 0.9rem;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    font-family: 'Geist', Arial, Helvetica, sans-serif;
+    background: var(--bg);
+    color: var(--ink);
+    -webkit-font-smoothing: antialiased;
+  }
+  code, .mono { font-family: 'Geist Mono', ui-monospace, monospace; }
+  ::selection { background: var(--ink); color: #fff; }
+  a { color: inherit; text-decoration: none; }
+  img { max-width: 100%; }
+
+  .wrap { max-width: 1200px; margin: 0 auto; padding: 0 1.5rem; }
+
+  /* NAV */
+  header.site {
+    position: sticky; top: 0; z-index: 50;
+    background: rgba(250,250,250,0.8);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid var(--line);
+  }
+  .nav {
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 1rem 0;
+  }
+  .logo { display: flex; align-items: center; gap: 0.5rem; font-weight: 600; font-size: 1.05rem; letter-spacing: -0.02em; cursor: pointer; }
+  .logo .mark {
+    width: 22px; height: 22px; color: var(--ink); flex-shrink: 0;
+  }
+  .nav-links { display: flex; gap: 0.25rem; align-items: center; }
+  .nav-links a.pill {
+    font-size: 0.875rem; font-weight: 500; color: var(--gray-600);
+    padding: 0.5rem 0.9rem; border-radius: 999px; transition: all .15s;
+  }
+  .nav-links a.pill:hover { background: #f2f2f2; color: var(--ink); }
+  .nav-cta {
+    background: var(--ink); color: #fff !important;
+    padding: 0.5rem 1.1rem; border-radius: 999px; font-size: 0.85rem; font-weight: 600;
+    margin-left: 0.5rem; transition: background .15s;
+  }
+  .nav-links a.pill.nav-cta:hover { background: #2a2a2a; color: #fff; }
+  @media (max-width: 720px) { .nav-links a.pill:not(.nav-cta) { display: none; } }
+
+  .audience-switch {
+    display: inline-flex; align-items: center; gap: 0.4rem;
+    border: 1px solid var(--line-2); background: var(--white);
+    padding: 0.5rem 1rem; border-radius: 999px; font-size: 0.82rem; font-weight: 600;
+    color: var(--gray-700); transition: background .15s, color .15s;
+  }
+  .audience-switch:hover { background: #f2f2f2; color: var(--ink); }
+  @media (max-width: 640px) {
+    .nav { flex-wrap: wrap; row-gap: 0.6rem; }
+    .audience-switch { order: 3; width: 100%; justify-content: center; }
+  }
+
+  /* ESPACE TOGGLE (entreprise / distributeur) */
+  body[data-espace="entreprise"] #view-distributeur,
+  body[data-espace="entreprise"] .nav-distributeur,
+  body[data-espace="entreprise"] .footer-links-distributeur,
+  body[data-espace="entreprise"] .switch-to-entreprise { display: none; }
+  body[data-espace="distributeur"] #view-entreprise,
+  body[data-espace="distributeur"] .nav-entreprise,
+  body[data-espace="distributeur"] .footer-links-entreprise,
+  body[data-espace="distributeur"] .switch-to-distributeur { display: none; }
+
+  /* HERO */
+  .hero {
+    padding: 6rem 0 2.5rem; position: relative;
+    background-image: radial-gradient(var(--line-2) 1px, transparent 1px);
+    background-size: 22px 22px;
+    background-position: center -10px;
+    -webkit-mask-image: linear-gradient(to bottom, black 0%, black 85%, transparent 100%);
+    mask-image: linear-gradient(to bottom, black 0%, black 85%, transparent 100%);
+  }
+  .hero-inner { position: relative; text-align: center; }
+  .eyebrow {
+    display: inline-flex; align-items: center; gap: 0.5rem;
+    border: 1px solid var(--line-2); background: var(--white);
+    padding: 0.35rem 0.85rem; border-radius: 999px;
+    font-size: 0.8rem; font-weight: 500; color: var(--gray-700);
+    margin-bottom: 1.75rem;
+  }
+  .dot { width: 6px; height: 6px; border-radius: 999px; background: var(--green); }
+  h1 {
+    font-size: clamp(2.4rem, 5.4vw, 4rem);
+    font-weight: 600; letter-spacing: -0.04em; line-height: 1.1;
+    max-width: 1000px; margin: 0 auto 1.5rem;
+  }
+  .lede {
+    font-size: 1.15rem; color: var(--gray-600); max-width: 640px;
+    line-height: 1.6; margin: 0 auto 2.25rem;
+  }
+  .cta-row { display: flex; gap: 0.75rem; flex-wrap: wrap; margin-bottom: 1rem; justify-content: center; }
+  .btn {
+    display: inline-flex; align-items: center; gap: 0.5rem;
+    padding: 0.75rem 1.4rem; border-radius: 999px; font-weight: 600; font-size: 0.92rem;
+    transition: transform .15s, opacity .15s, background .15s;
+    border: none; cursor: pointer; font-family: inherit;
+  }
+  .btn-primary { background: var(--ink); color: #fff; }
+  .btn-primary:hover { opacity: .8; }
+  .btn-secondary { background: var(--white); border: 1px solid var(--line-2); color: var(--ink); }
+  .btn-secondary:hover { background: #f5f5f5; }
+  .btn:hover { transform: translateY(-2px); }
+  .btn:active { transform: translateY(0); }
+
+  /* HERO — variante espace distributeur (copy plus longue) */
+  .hero-dist { padding-bottom: 2.5rem; }
+  .hero-dist h1 { font-size: clamp(2.6rem, 6.4vw, 4.6rem); line-height: 1.02; }
+  .hero-dist .cta-row { margin-bottom: 1rem; }
+
+  #comment-ca-marche-d { padding-top: 4rem; border-top: 1px solid var(--line); }
+  #comment-ca-marche-d h2 { font-size: clamp(1.5rem, 2.6vw, 2.1rem); }
+
+  /* MOTION */
+  header.site { transition: box-shadow .25s ease; }
+  header.site.scrolled { box-shadow: 0 8px 24px rgba(0,0,0,0.05); }
+  @media (prefers-reduced-motion: no-preference) {
+    .reveal, .reveal-stagger { opacity: 0; transform: translateY(22px); transition: opacity .7s cubic-bezier(.16,1,.3,1), transform .7s cubic-bezier(.16,1,.3,1); }
+    .reveal.in-view, .reveal-stagger.in-view { opacity: 1; transform: translateY(0); }
+    .reveal-stagger > * { opacity: 0; transform: translateY(18px); transition: opacity .6s cubic-bezier(.16,1,.3,1), transform .6s cubic-bezier(.16,1,.3,1); }
+    .reveal-stagger.in-view > * { opacity: 1; transform: translateY(0); }
+    .reveal-stagger > *:nth-child(1) { transition-delay: .04s; }
+    .reveal-stagger > *:nth-child(2) { transition-delay: .1s; }
+    .reveal-stagger > *:nth-child(3) { transition-delay: .16s; }
+    .reveal-stagger > *:nth-child(4) { transition-delay: .22s; }
+    .reveal-stagger > *:nth-child(5) { transition-delay: .28s; }
+    .reveal-stagger > *:nth-child(6) { transition-delay: .34s; }
+    .hero-inner > * { animation: heroIn .7s cubic-bezier(.16,1,.3,1) both; }
+    .hero-inner > *:nth-child(1) { animation-delay: .05s; }
+    .hero-inner > *:nth-child(2) { animation-delay: .13s; }
+    .hero-inner > *:nth-child(3) { animation-delay: .21s; }
+    @keyframes heroIn { from { opacity: 0; transform: translateY(18px); } to { opacity: 1; transform: none; } }
+    @keyframes pulseVal { 0% { transform: scale(1); } 35% { transform: scale(1.08); color: var(--green); } 100% { transform: scale(1); color: var(--ink); } }
+    .sim-result-value.pulse #sim-output { display: inline-block; animation: pulseVal .4s ease; }
+  }
+
+  /* SECTION HEADERS */
+  section { padding: 5rem 0; }
+  .section-head { max-width: 960px; margin: 0 auto 3rem; text-align: center; }
+  #view-distributeur .section-head { max-width: 1100px; }
+  .kicker {
+    font-family: 'Geist Mono', monospace;
+    font-size: 0.78rem; font-weight: 500; text-transform: uppercase; letter-spacing: 0.06em;
+    color: var(--gray-500); margin-bottom: 0.9rem; display: block;
+  }
+  h2 { font-size: clamp(1.8rem, 3.4vw, 2.6rem); font-weight: 600; letter-spacing: -0.03em; margin: 0 0 0.85rem; line-height: 1.1; }
+  .section-sub { color: var(--gray-600); font-size: 1.02rem; line-height: 1.6; }
+
+  /* CARD */
+  .card {
+    position: relative; background: var(--white); border: 1px solid var(--line);
+    border-radius: var(--radius); padding: 1.85rem;
+    transition: border-color .2s, transform .2s, box-shadow .2s;
+  }
+  .card:hover { border-color: #d4d4d4; transform: translateY(-4px); box-shadow: 0 12px 28px rgba(0,0,0,0.06); }
+
+  #comment-ca-marche { padding-top: 4rem; border-top: 1px solid var(--line); }
+  #comment-ca-marche h2 { font-size: clamp(1.5rem, 2.6vw, 2.1rem); }
+
+  /* HOW IT WORKS */
+  .steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0.75rem; }
+  @media (max-width: 900px) { .steps { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 560px) { .steps { grid-template-columns: 1fr; } }
+  .steps .card { padding: 1.5rem 1.3rem; }
+  .step-num {
+    font-family: 'Geist Mono', monospace;
+    display: inline-flex; align-items: center; justify-content: center;
+    width: 1.9rem; height: 1.9rem; border-radius: 999px; border: 1px solid var(--line-2);
+    font-weight: 500; font-size: 0.82rem; margin-bottom: 1.1rem; color: var(--gray-700);
+  }
+  .step-title { font-weight: 600; font-size: 0.95rem; margin-bottom: 0.4rem; letter-spacing: -0.01em; }
+  .step-desc { color: var(--gray-600); font-size: 0.9rem; line-height: 1.55; }
+
+  /* DUAL "POURQUOI" COLUMNS (espace entreprise) */
+  .dual-why { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+  @media (max-width: 780px) { .dual-why { grid-template-columns: 1fr; } }
+  .why-card {
+    background: var(--white); border: 1px solid var(--line); border-radius: var(--radius);
+    padding: 1.6rem 1.8rem; transition: border-color .2s, transform .2s, box-shadow .2s;
+  }
+  .why-card:hover { border-color: #d4d4d4; transform: translateY(-4px); box-shadow: 0 12px 28px rgba(0,0,0,0.06); }
+  .why-card h3 { font-size: 1.2rem; font-weight: 600; letter-spacing: -0.02em; margin: 0.9rem 0 0; }
+  .why-items { list-style: none; margin: 1.4rem 0 0; padding: 0; display: flex; flex-direction: column; gap: 0.85rem; }
+  .why-items li { display: flex; align-items: center; gap: 0.65rem; font-weight: 500; font-size: 0.98rem; }
+  .why-items li svg { width: 1.15rem; height: 1.15rem; color: var(--green); flex-shrink: 0; }
+
+  /* AUDIENCE (espace distributeur — "pour qui") */
+  .audience-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+  .audience-grid-single { grid-template-columns: 1fr; max-width: 560px; margin: 0 auto; }
+  @media (max-width: 780px) { .audience-grid { grid-template-columns: 1fr; } }
+  .audience-card { background: var(--white); color: var(--ink); border: 1px solid var(--line); border-radius: var(--radius); padding: 2rem; transition: transform .2s, box-shadow .2s; }
+  .audience-card:hover { transform: translateY(-4px); box-shadow: 0 12px 28px rgba(0,0,0,0.08); }
+  .audience-card.dark { background: var(--ink); color: #fff; border-color: var(--ink); }
+  .audience-card h3 { font-size: 1.2rem; font-weight: 600; margin: 0 0 0.75rem; letter-spacing: -0.02em; }
+  .audience-card p { color: var(--gray-600); font-size: 0.93rem; line-height: 1.6; margin-bottom: 1.25rem; }
+  .audience-card.dark p { color: #a1a1a1; }
+  .audience-list { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 0.6rem; }
+  .audience-list li { display: flex; gap: 0.6rem; font-size: 0.88rem; color: var(--gray-700); }
+  .audience-card.dark .audience-list li { color: #d4d4d4; }
+  .audience-list li::before { content: "+"; color: var(--gray-500); font-family: 'Geist Mono', monospace; }
+  .audience-card.dark .audience-list li::before { color: #666; }
+  .badge-tag {
+    font-family: 'Geist Mono', monospace;
+    display: inline-block; font-size: 0.72rem; font-weight: 500; text-transform: uppercase;
+    letter-spacing: 0.04em; padding: 0.3rem 0.65rem; border-radius: 999px;
+    border: 1px solid var(--line-2); color: var(--gray-700); margin-bottom: 1.25rem;
+  }
+  .audience-card.dark .badge-tag { border-color: #333; color: #ccc; }
+
+  /* SIMULATEUR (espace entreprise) */
+  .sim-card { max-width: 760px; margin: 0 auto; padding: 2.5rem; }
+  .sim-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.25rem; margin-bottom: 2rem; }
+  .sim-grid .sim-field-wide { grid-column: 1 / -1; }
+  .sim-form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; }
+  @media (max-width: 640px) { .sim-grid, .sim-form-grid { grid-template-columns: 1fr; } }
+  .sim-field label { display: block; font-size: 0.82rem; font-weight: 500; color: var(--gray-600); margin-bottom: 0.5rem; }
+  .sim-field select, .sim-field input, .sim-field textarea {
+    width: 100%; padding: 0.7rem 0.9rem; border: 1px solid var(--line-2); border-radius: var(--radius-sm);
+    font-family: inherit; font-size: 0.95rem; background: var(--white); color: var(--ink);
+  }
+  .sim-field select { text-overflow: ellipsis; }
+  .sim-field textarea { resize: vertical; min-height: 6rem; }
+  .sim-field select:focus, .sim-field input:focus, .sim-field textarea:focus { outline: none; border-color: var(--ink); }
+  .sim-result {
+    text-align: center; padding: 1.75rem 0; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line);
+    margin-bottom: 1.75rem;
+  }
+  .sim-result-label { font-size: 0.85rem; color: var(--gray-600); margin-bottom: 0.4rem; }
+  .sim-result-value { font-size: 2.6rem; font-weight: 700; letter-spacing: -0.03em; }
+  .sim-result-unit { font-size: 1rem; font-weight: 500; color: var(--gray-500); }
+  .sim-result-fine { font-size: 0.78rem; color: var(--gray-500); margin-top: 0.6rem; font-family: 'Geist Mono', monospace; }
+  .sim-cta-row { text-align: center; }
+  .sim-form { display: flex; flex-direction: column; gap: 1.25rem; margin-top: 0.5rem; }
+  .sim-form-cta { text-align: center; }
+  .sim-confirm { font-size: 0.9rem; color: var(--green); font-weight: 500; text-align: center; }
+  .sim-error { font-size: 0.8rem; color: #c0392b; text-align: center; }
+
+  /* CTA FINAL */
+  #contact, #contact-d { padding-top: 0; padding-bottom: 2.5rem; }
+  #faq { padding-top: 2.5rem; }
+  .cta-final {
+    text-align: center; border-top: 1px solid var(--line); padding-top: 5rem;
+  }
+  .cta-final .section-sub { max-width: 620px; margin: 0.75rem auto 2rem; }
+  .cta-final .cta-row { justify-content: center; margin-bottom: 0; }
+  .cta-final-form { max-width: 560px; margin: 0 auto; text-align: left; }
+  .cta-final-confirm { margin-top: 0.5rem; }
+
+  /* FOOTER */
+  footer {
+    border-top: 1px solid var(--line); padding: 2.5rem 0;
+  }
+  .footer-row {
+    display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;
+  }
+  .footer-links { display: flex; gap: 1.5rem; font-size: 0.85rem; color: var(--gray-500); }
+  .footer-links a:hover { color: var(--ink); }
+  .footer-fine { font-size: 0.8rem; color: var(--gray-500); margin-top: 1.5rem; font-family: 'Geist Mono', monospace; }
+
+  /* FAQ (espace entreprise) */
+  .faq-list { max-width: 780px; margin: 0 auto; display: flex; flex-direction: column; gap: 1rem; }
+  .faq-item {
+    background: var(--white); border: 1px solid var(--line); border-radius: 1.1rem;
+    padding: 0; overflow: hidden;
+    transition: border-color .2s, box-shadow .2s, transform .2s;
+  }
+  .faq-item:hover { border-color: #d4d4d4; transform: translateY(-2px); box-shadow: 0 8px 20px rgba(0,0,0,0.05); }
+  .faq-item[open] { border-color: var(--ink); box-shadow: 0 6px 20px rgba(0,0,0,0.06); }
+  .faq-item summary {
+    cursor: pointer; list-style: none; font-weight: 600; font-size: 1.02rem;
+    display: flex; align-items: center; justify-content: space-between; gap: 1.5rem;
+    padding: 1.4rem 1.6rem;
+  }
+  .faq-item summary::-webkit-details-marker { display: none; }
+  .faq-q { flex: 1; letter-spacing: -0.01em; }
+  .faq-icon {
+    flex-shrink: 0; width: 2.1rem; height: 2.1rem; border-radius: 999px;
+    border: 1px solid var(--line-2); position: relative;
+    transition: background .2s, border-color .2s;
+  }
+  .faq-icon::before, .faq-icon::after {
+    content: ''; position: absolute; top: 50%; left: 50%; background: var(--gray-700);
+    transform: translate(-50%, -50%); transition: transform .2s, background .2s, opacity .2s;
+  }
+  .faq-icon::before { width: 0.7rem; height: 1.5px; }
+  .faq-icon::after { width: 1.5px; height: 0.7rem; }
+  .faq-item[open] .faq-icon { background: var(--ink); border-color: var(--ink); }
+  .faq-item[open] .faq-icon::before,
+  .faq-item[open] .faq-icon::after { background: #fff; }
+  .faq-item[open] .faq-icon::after { transform: translate(-50%, -50%) scaleY(0); opacity: 0; }
+  .faq-a { padding: 0 1.6rem 1.5rem; }
+  .faq-a p {
+    color: var(--gray-600); font-size: 0.94rem; line-height: 1.65; margin: 0;
+    padding-top: 1.1rem; border-top: 1px solid var(--line);
+  }
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "Pace",
+  "url": "https://pace.lease/"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FinancialService",
+  "name": "Pace",
+  "description": "Solution de financement d'équipements professionnels 100% digitale pour TPE et PME.",
+  "url": "https://pace.lease/",
+  "areaServed": "FR"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Faut-il un apport pour financer un équipement professionnel ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Non, la location financière chez Pace finance 100% du prix d'acquisition de votre équipement, sans apport initial. Vous préservez ainsi votre trésorerie dès la signature du contrat."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Quelle différence entre leasing, LOA et location financière ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Ces termes désignent des mécanismes proches : un financement locatif d'un bien professionnel, avec ou sans option d'achat en fin de contrat. Pace propose une location financière 100% digitale, de la simulation à la signature électronique."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Quels équipements peuvent être financés via Pace ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Informatique et bureautique, matériel médical, machines et équipement industriel, véhicules professionnels, et plus largement tout équipement nécessaire à l'activité d'une TPE ou PME."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Que se passe-t-il à la fin du contrat de location financière ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "À l'échéance du contrat, vous pouvez généralement lever l'option d'achat pour un montant résiduel, restituer l'équipement ou le renouveler avec du matériel plus récent, selon les conditions prévues à la signature."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Le financement d'équipements présente-t-il un avantage fiscal pour mon entreprise ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Les loyers versés dans le cadre d'un financement d'équipement sont généralement déductibles du résultat imposable, contrairement à un achat immobilisé passant par l'amortissement. Votre expert-comptable reste le mieux placé pour évaluer l'impact précis sur votre situation."
+      }
+    }
+  ]
+}
+</script>
+</head>
+<body data-espace="entreprise">
+
+<header class="site">
+  <div class="wrap nav">
+    <a href="#" class="logo" id="site-logo"><svg class="mark" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><polygon points="12,2 20.66,7 20.66,17 12,22 3.34,17 3.34,7" stroke="currentColor" stroke-width="3.5" stroke-linejoin="round"/></svg>Pace</a>
+    <a href="#" class="audience-switch switch-to-distributeur" data-target="distributeur">Espace distributeur <span aria-hidden="true">→</span></a>
+    <a href="#" class="audience-switch switch-to-entreprise" data-target="entreprise">Espace entreprise <span aria-hidden="true">→</span></a>
+    <nav class="nav-links nav-entreprise">
+      <a class="pill" href="#comment-ca-marche">Comment ça marche</a>
+      <a class="pill" href="#avantages">Avantages</a>
+      <a class="pill" href="#simulateur">Simulateur</a>
+      <a id="nav-demo-btn" class="pill nav-cta" href="#contact">Demander une démo</a>
+    </nav>
+    <nav class="nav-links nav-distributeur">
+      <a class="pill" href="#comment-ca-marche-d">Comment ça marche</a>
+      <a class="pill" href="#avantages-d">Avantages</a>
+      <a class="pill" href="#pour-qui-d">Pour qui</a>
+      <a id="nav-demo-btn-d" class="pill nav-cta" href="#contact-d">Devenir partenaire</a>
+    </nav>
+  </div>
+</header>
+
+<div id="view-entreprise">
+<main>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="wrap hero-inner">
+      <h1>La solution de financement d'équipements pour les entreprises</h1>
+      <div class="cta-row">
+        <a href="#simulateur" class="btn btn-primary">Simuler mon financement</a>
+        <a href="#comment-ca-marche" class="btn btn-secondary">Voir comment ça marche</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- COMMENT CA MARCHE -->
+  <section id="comment-ca-marche">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <span class="kicker">// comment ça marche</span>
+        <h2>Votre équipement financé en 4 étapes</h2>
+        <p class="section-sub">Un parcours pensé pour vous équiper rapidement et sans sortir de cash</p>
+      </div>
+
+      <div class="steps reveal-stagger">
+        <div class="card">
+          <span class="step-num">1</span>
+          <div class="step-title">Simulez votre loyer</div>
+          <div class="step-desc">Décrivez votre besoin et obtenez une estimation immédiate, sans engagement</div>
+        </div>
+        <div class="card">
+          <span class="step-num">2</span>
+          <div class="step-title">Obtenez une réponse en 24h</div>
+          <div class="step-desc">Notre équipe étudie votre dossier et vous répond rapidement</div>
+        </div>
+        <div class="card">
+          <span class="step-num">3</span>
+          <div class="step-title">Signez en ligne</div>
+          <div class="step-desc">Votre contrat est signé électroniquement en quelques clics</div>
+        </div>
+        <div class="card">
+          <span class="step-num">4</span>
+          <div class="step-title">Profitez de votre équipement</div>
+          <div class="step-desc">La location démarre, profitez de votre équipement</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- POURQUOI PACE / POURQUOI LA LOCATION FINANCIERE -->
+  <section id="avantages" style="background: var(--white); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line);">
+    <div class="wrap">
+      <div class="dual-why reveal-stagger">
+        <div class="why-card">
+          <span class="kicker">// pourquoi pace</span>
+          <h3>Un financement pensé pour la vitesse et la simplicité</h3>
+          <ul class="why-items">
+            <li><svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4 10.5L8 14.5L16 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> Conditions avantageuses</li>
+            <li><svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4 10.5L8 14.5L16 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> Réponse en 24h</li>
+            <li><svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4 10.5L8 14.5L16 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> 100% digitalisé</li>
+          </ul>
+        </div>
+        <div class="why-card">
+          <span class="kicker">// pourquoi financer votre équipement</span>
+          <h3>Pourquoi choisir la location financière</h3>
+          <ul class="why-items">
+            <li><svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4 10.5L8 14.5L16 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> Trésorerie préservée</li>
+            <li><svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4 10.5L8 14.5L16 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> Loyers déductibles</li>
+            <li><svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4 10.5L8 14.5L16 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> Matériel toujours à jour</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SIMULATEUR -->
+  <section id="simulateur">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <span class="kicker">// simulateur</span>
+        <h2>Simulez votre financement en 30 secondes</h2>
+        <p class="section-sub">Estimez votre loyer mensuel et faites une demande pour être recontacté par notre équipe</p>
+      </div>
+
+      <div class="card sim-card reveal">
+        <div class="sim-grid">
+          <div class="sim-field sim-field-wide">
+            <label for="sim-type">Type d'actif</label>
+            <select id="sim-type">
+              <option value="Informatique &amp; bureautique">Informatique &amp; bureautique</option>
+              <option value="Matériel médical &amp; dentaire">Matériel médical &amp; dentaire</option>
+              <option value="Machines &amp; équipement industriel">Machines &amp; équipement industriel</option>
+              <option value="Véhicules professionnels">Véhicules professionnels</option>
+              <option value="BTP &amp; travaux publics">BTP &amp; travaux publics</option>
+              <option value="Restauration &amp; hôtellerie (CHR)">Restauration &amp; hôtellerie (CHR)</option>
+              <option value="Matériel agricole">Matériel agricole</option>
+              <option value="Sécurité &amp; vidéosurveillance">Sécurité &amp; vidéosurveillance</option>
+              <option value="Mobilier professionnel">Mobilier professionnel</option>
+              <option value="Logiciels &amp; solutions numériques">Logiciels &amp; solutions numériques</option>
+              <option value="Énergie &amp; environnement">Énergie &amp; environnement</option>
+              <option value="Autre équipement professionnel">Autre équipement professionnel</option>
+            </select>
+          </div>
+          <div class="sim-field">
+            <label for="sim-value">Valeur d'acquisition (€ HT)</label>
+            <input type="number" id="sim-value" min="500" step="100" value="15000">
+          </div>
+          <div class="sim-field">
+            <label for="sim-months">Durée</label>
+            <select id="sim-months">
+              <option value="24">24 mois</option>
+              <option value="36" selected>36 mois</option>
+              <option value="48">48 mois</option>
+              <option value="60">60 mois</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="sim-result">
+          <div class="sim-result-label">Loyer mensuel estimé</div>
+          <div class="sim-result-value" id="sim-result-value"><span id="sim-output">480</span> € <span class="sim-result-unit">HT / mois</span></div>
+          <div class="sim-result-fine">Estimation indicative. Le taux définitif dépend de l'étude de votre dossier.</div>
+        </div>
+
+        <div id="sim-cta-wrap" class="sim-cta-row">
+          <button id="sim-cta" type="button" class="btn btn-primary">Faire une demande</button>
+        </div>
+
+        <form id="sim-form" class="sim-form" style="display:none;">
+          <div class="sim-form-grid">
+            <div class="sim-field">
+              <label for="sim-email">Email professionnel</label>
+              <input type="email" id="sim-email" required placeholder="vous@entreprise.fr">
+            </div>
+            <div class="sim-field">
+              <label for="sim-siren">SIREN de l'entreprise</label>
+              <input type="text" id="sim-siren" required pattern="[0-9]{9}" maxlength="9" inputmode="numeric" placeholder="123456789">
+            </div>
+          </div>
+          <div class="sim-error" id="sim-error" style="display:none;">Merci de renseigner un SIREN valide (9 chiffres).</div>
+          <div class="sim-form-cta">
+            <button type="submit" class="btn btn-primary">Envoyer ma demande</button>
+          </div>
+        </form>
+        <div id="sim-confirm" class="sim-confirm" style="display:none;">Merci — votre demande a été transmise, notre équipe vous recontacte sous 24h.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA FINAL -->
+  <section id="contact">
+    <div class="wrap cta-final reveal">
+      <span class="kicker">// prêt à démarrer</span>
+      <h2>Prêt à financer votre prochain équipement ?</h2>
+      <p class="section-sub">Décrivez-nous votre besoin, on revient vers vous sous 24h avec une proposition</p>
+
+      <div id="cta-final-row" class="cta-row">
+        <button id="cta-final-btn" type="button" class="btn btn-primary">Nous écrire</button>
+      </div>
+
+      <form id="cta-final-form" class="sim-form cta-final-form" style="display:none;">
+        <div class="sim-form-grid">
+          <div class="sim-field">
+            <label for="cta-final-email">Email professionnel</label>
+            <input type="email" id="cta-final-email" required placeholder="vous@entreprise.fr">
+          </div>
+          <div class="sim-field">
+            <label for="cta-final-siren">SIREN de l'entreprise</label>
+            <input type="text" id="cta-final-siren" required pattern="[0-9]{9}" maxlength="9" inputmode="numeric" placeholder="123456789">
+          </div>
+        </div>
+        <div class="sim-field">
+          <label for="cta-final-message">Votre message</label>
+          <textarea id="cta-final-message" required rows="4" placeholder="Décrivez votre besoin ou votre question..."></textarea>
+        </div>
+        <div class="sim-error" id="cta-final-error" style="display:none;">Merci de renseigner un SIREN valide (9 chiffres).</div>
+        <div class="sim-form-cta">
+          <button type="submit" class="btn btn-primary">Envoyer mon message</button>
+        </div>
+      </form>
+      <div id="cta-final-confirm" class="sim-confirm cta-final-confirm" style="display:none;">Merci — votre message a été transmis, notre équipe vous recontacte sous 24h.</div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <span class="kicker">// questions fréquentes</span>
+      </div>
+
+      <div class="faq-list reveal-stagger">
+        <details class="faq-item">
+          <summary><span class="faq-q">Faut-il un apport pour financer un équipement professionnel ?</span><span class="faq-icon" aria-hidden="true"></span></summary>
+          <div class="faq-a"><p>Non, la location financière chez Pace finance 100% du prix d'acquisition de votre équipement, sans apport initial. Vous préservez ainsi votre trésorerie dès la signature du contrat.</p></div>
+        </details>
+        <details class="faq-item">
+          <summary><span class="faq-q">Quelle différence entre leasing, LOA et location financière ?</span><span class="faq-icon" aria-hidden="true"></span></summary>
+          <div class="faq-a"><p>Ces termes désignent des mécanismes proches : un financement locatif d'un bien professionnel, avec ou sans option d'achat en fin de contrat. Pace propose une location financière 100% digitale, de la simulation à la signature électronique.</p></div>
+        </details>
+        <details class="faq-item">
+          <summary><span class="faq-q">Quels équipements peuvent être financés via Pace ?</span><span class="faq-icon" aria-hidden="true"></span></summary>
+          <div class="faq-a"><p>Informatique et bureautique, matériel médical, machines et équipement industriel, véhicules professionnels, et plus largement tout équipement nécessaire à l'activité d'une TPE ou PME.</p></div>
+        </details>
+        <details class="faq-item">
+          <summary><span class="faq-q">Que se passe-t-il à la fin du contrat de location financière ?</span><span class="faq-icon" aria-hidden="true"></span></summary>
+          <div class="faq-a"><p>À l'échéance du contrat, vous pouvez généralement lever l'option d'achat pour un montant résiduel, restituer l'équipement ou le renouveler avec du matériel plus récent, selon les conditions prévues à la signature.</p></div>
+        </details>
+        <details class="faq-item">
+          <summary><span class="faq-q">Le financement d'équipements présente-t-il un avantage fiscal pour mon entreprise ?</span><span class="faq-icon" aria-hidden="true"></span></summary>
+          <div class="faq-a"><p>Les loyers versés dans le cadre d'un financement d'équipement sont généralement déductibles du résultat imposable, contrairement à un achat immobilisé passant par l'amortissement. Votre expert-comptable reste le mieux placé pour évaluer l'impact précis sur votre situation.</p></div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+</main>
+</div>
+
+<div id="view-distributeur">
+<main>
+
+  <!-- HERO -->
+  <section class="hero hero-dist">
+    <div class="wrap hero-inner">
+      <h1>Le financement locatif qui fait vendre vos équipements.</h1>
+      <p class="lede">
+        Proposez à vos clients un financement locatif
+      </p>
+      <div class="cta-row">
+        <a href="#contact-d" class="btn btn-primary">Devenir partenaire</a>
+        <a href="#comment-ca-marche-d" class="btn btn-secondary">Voir comment ça marche</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- COMMENT CA MARCHE -->
+  <section id="comment-ca-marche-d">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <span class="kicker">// le process</span>
+        <h2>De la demande au dossier actif, en 4 étapes</h2>
+        <p class="section-sub">Un parcours pensé pour ne jamais ralentir une vente.</p>
+      </div>
+
+      <div class="steps reveal-stagger">
+        <div class="card">
+          <span class="step-num">1</span>
+          <div class="step-title">Demande envoyée</div>
+          <div class="step-desc">Vous simulez le financement et soumettez votre demande en ligne.</div>
+        </div>
+        <div class="card">
+          <span class="step-num">2</span>
+          <div class="step-title">Demande validée</div>
+          <div class="step-desc">Notre équipe étudie et valide le dossier rapidement.</div>
+        </div>
+        <div class="card">
+          <span class="step-num">3</span>
+          <div class="step-title">Signature en ligne</div>
+          <div class="step-desc">Bon de livraison et contrat sont signés électroniquement.</div>
+        </div>
+        <div class="card">
+          <span class="step-num">4</span>
+          <div class="step-title">Dossier actif</div>
+          <div class="step-desc">Le contrat de location démarre et vous êtes réglés en 48h.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- AVANTAGES -->
+  <section id="avantages-d" style="background: var(--white); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line);">
+    <div class="wrap">
+      <div class="dual-why reveal-stagger">
+        <div class="why-card">
+          <span class="kicker">// pourquoi pace</span>
+          <h3>Un financement pensé pour la vitesse et la marge</h3>
+          <ul class="why-items">
+            <li><svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4 10.5L8 14.5L16 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> Taux optimisé</li>
+            <li><svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4 10.5L8 14.5L16 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> Réponse rapide</li>
+            <li><svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4 10.5L8 14.5L16 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> 100% digital</li>
+          </ul>
+        </div>
+        <div class="why-card">
+          <span class="kicker">// pourquoi devenir partenaire</span>
+          <h3>Vendez plus, sans porter le risque</h3>
+          <ul class="why-items">
+            <li><svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4 10.5L8 14.5L16 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> Augmente vos ventes</li>
+            <li><svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4 10.5L8 14.5L16 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> Suivi temps réel</li>
+            <li><svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4 10.5L8 14.5L16 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> Interlocuteur dédié</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- POUR QUI -->
+  <section id="pour-qui-d" style="background: var(--white); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line);">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <span class="kicker">// pour qui</span>
+        <h2>Pensé pour les distributeurs</h2>
+      </div>
+
+      <div class="audience-grid audience-grid-single reveal-stagger">
+        <div class="audience-card dark">
+          <span class="badge-tag">Distributeurs</span>
+          <h3>Vendez plus, sans porter le risque</h3>
+          <p>Proposez le financement directement à vos clients au moment de la vente, avec vos propres conditions et sans immobiliser votre trésorerie.</p>
+          <ul class="audience-list">
+            <li>Simulation instantanée du loyer</li>
+            <li>Taux et durées personnalisables</li>
+            <li>Espace dédié pour suivre vos dossiers</li>
+            <li>Paiement rapide une fois le dossier actif</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA FINAL -->
+  <section id="contact-d">
+    <div class="wrap cta-final reveal">
+      <span class="kicker">// prêt à démarrer</span>
+      <h2>Prêt à financer vos ventes ?</h2>
+      <p class="section-sub">Décrivez-nous votre besoin — on revient vers vous sous 24h.</p>
+
+      <div id="cta-final-row-d" class="cta-row">
+        <button id="cta-final-btn-d" type="button" class="btn btn-primary">Devenir partenaire</button>
+        <button id="cta-write-btn-d" type="button" class="btn btn-secondary">Nous écrire</button>
+      </div>
+
+      <form id="cta-write-form-d" class="sim-form cta-final-form" style="display:none;">
+        <div class="sim-form-grid">
+          <div class="sim-field">
+            <label for="cta-write-email-d">Email professionnel</label>
+            <input type="email" id="cta-write-email-d" required placeholder="vous@entreprise.fr">
+          </div>
+          <div class="sim-field">
+            <label for="cta-write-siren-d">SIREN de l'entreprise</label>
+            <input type="text" id="cta-write-siren-d" required pattern="[0-9]{9}" maxlength="9" inputmode="numeric" placeholder="123456789">
+          </div>
+        </div>
+        <div class="sim-field">
+          <label for="cta-write-message-d">Votre message</label>
+          <textarea id="cta-write-message-d" required rows="4" placeholder="Décrivez votre besoin ou votre question..."></textarea>
+        </div>
+        <div class="sim-error" id="cta-write-error-d" style="display:none;">Merci de renseigner un SIREN valide (9 chiffres).</div>
+        <div class="sim-form-cta">
+          <button type="submit" class="btn btn-primary">Envoyer mon message</button>
+        </div>
+      </form>
+      <div id="cta-write-confirm-d" class="sim-confirm cta-final-confirm" style="display:none;">Merci — votre message a été transmis, notre équipe vous recontacte sous 24h.</div>
+    </div>
+  </section>
+
+</main>
+</div>
+
+<footer>
+  <div class="wrap footer-row">
+    <a href="#" class="logo" id="footer-logo"><svg class="mark" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><polygon points="12,2 20.66,7 20.66,17 12,22 3.34,17 3.34,7" stroke="currentColor" stroke-width="3.5" stroke-linejoin="round"/></svg>Pace</a>
+    <div class="footer-links footer-links-entreprise">
+      <a href="#comment-ca-marche">Comment ça marche</a>
+      <a href="#avantages">Avantages</a>
+      <a href="#simulateur">Simulateur</a>
+      <a href="articles.html">FAQ</a>
+      <a href="mailto:lu.cebral@gmail.com">Contact</a>
+    </div>
+    <div class="footer-links footer-links-distributeur">
+      <a href="#comment-ca-marche-d">Comment ça marche</a>
+      <a href="#avantages-d">Avantages</a>
+      <a href="#pour-qui-d">Pour qui</a>
+      <a href="mailto:lu.cebral@gmail.com">Contact</a>
+    </div>
+  </div>
+  <div class="wrap footer-fine">© 2026 Pace — Solution de financement locatif pour entreprises et distributeurs</div>
+</footer>
+
+<script>
+(function(){
+  function setEspace(name) {
+    document.body.setAttribute('data-espace', name);
+    window.scrollTo(0, 0);
+  }
+  document.querySelectorAll('[data-target]').forEach(function (el) {
+    el.addEventListener('click', function (e) {
+      e.preventDefault();
+      setEspace(this.getAttribute('data-target'));
+    });
+  });
+  document.getElementById('site-logo').addEventListener('click', function (e) {
+    e.preventDefault();
+    setEspace('entreprise');
+  });
+  document.getElementById('footer-logo').addEventListener('click', function (e) {
+    e.preventDefault();
+    setEspace('entreprise');
+  });
+
+  /* ---- ESPACE ENTREPRISE ---- */
+  var RATES = { 24: 4.5, 36: 3.2, 48: 2.6, 60: 2.2 };
+
+  // Coefficient appliqué au taux de base selon le profil de risque / valeur de revente de l'actif
+  var TYPE_COEFF = {
+    'Informatique & bureautique': 1.05,
+    'Matériel médical & dentaire': 1.05,
+    'Machines & équipement industriel': 1.05,
+    'Véhicules professionnels': 1.05,
+    'BTP & travaux publics': 1.05,
+    'Restauration & hôtellerie (CHR)': 1.05,
+    'Matériel agricole': 1.05,
+    'Sécurité & vidéosurveillance': 1.05,
+    'Mobilier professionnel': 1.05,
+    'Logiciels & solutions numériques': 1.05,
+    'Énergie & environnement': 1.05,
+    'Autre équipement professionnel': 1.05
+  };
+
+  var typeEl = document.getElementById('sim-type');
+  var valueEl = document.getElementById('sim-value');
+  var monthsEl = document.getElementById('sim-months');
+  var outputEl = document.getElementById('sim-output');
+  var resultValueEl = document.getElementById('sim-result-value');
+
+  function compute() {
+    var value = parseFloat(valueEl.value) || 0;
+    var months = parseInt(monthsEl.value, 10);
+    var baseRate = RATES[months] || 3.2;
+    var coeff = TYPE_COEFF[typeEl.value] || 1.00;
+    var monthly = (value * baseRate * coeff) / 100;
+    outputEl.textContent = Math.round(monthly).toLocaleString('fr-FR');
+    resultValueEl.classList.remove('pulse');
+    void resultValueEl.offsetWidth;
+    resultValueEl.classList.add('pulse');
+  }
+  [valueEl, monthsEl, typeEl].forEach(function (el) {
+    el.addEventListener('input', compute);
+    el.addEventListener('change', compute);
+  });
+  compute();
+
+  var ctaWrap = document.getElementById('sim-cta-wrap');
+  var ctaBtn = document.getElementById('sim-cta');
+  var form = document.getElementById('sim-form');
+  var errorEl = document.getElementById('sim-error');
+  var confirmEl = document.getElementById('sim-confirm');
+
+  ctaBtn.addEventListener('click', function () {
+    ctaWrap.style.display = 'none';
+    form.style.display = 'flex';
+  });
+
+  var ctaFinalRow = document.getElementById('cta-final-row');
+  var ctaFinalBtn = document.getElementById('cta-final-btn');
+  var ctaFinalForm = document.getElementById('cta-final-form');
+  var ctaFinalError = document.getElementById('cta-final-error');
+  var ctaFinalConfirm = document.getElementById('cta-final-confirm');
+
+  function openContactForm() {
+    ctaFinalRow.style.display = 'none';
+    ctaFinalForm.style.display = 'flex';
+  }
+  ctaFinalBtn.addEventListener('click', openContactForm);
+
+  var navDemoBtn = document.getElementById('nav-demo-btn');
+  navDemoBtn.addEventListener('click', function (e) {
+    e.preventDefault();
+    openContactForm();
+    document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
+  });
+
+  ctaFinalForm.addEventListener('submit', function (e) {
+    e.preventDefault();
+    var email = document.getElementById('cta-final-email').value.trim();
+    var siren = document.getElementById('cta-final-siren').value.trim();
+    var message = document.getElementById('cta-final-message').value.trim();
+
+    if (!/^[0-9]{9}$/.test(siren)) {
+      ctaFinalError.style.display = 'block';
+      return;
+    }
+    ctaFinalError.style.display = 'none';
+
+    var subject = encodeURIComponent('Message de contact — SIREN ' + siren);
+    var body = encodeURIComponent(
+      'Nouveau message de contact\n\n' +
+      'Email : ' + email + '\n' +
+      'SIREN : ' + siren + '\n\n' +
+      'Message :\n' + message
+    );
+    window.location.href = 'mailto:lu.cebral@gmail.com?subject=' + subject + '&body=' + body;
+
+    ctaFinalForm.style.display = 'none';
+    ctaFinalConfirm.style.display = 'block';
+  });
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    var email = document.getElementById('sim-email').value.trim();
+    var siren = document.getElementById('sim-siren').value.trim();
+
+    if (!/^[0-9]{9}$/.test(siren)) {
+      errorEl.style.display = 'block';
+      return;
+    }
+    errorEl.style.display = 'none';
+
+    var type = typeEl.value;
+    var value = valueEl.value;
+    var months = monthsEl.value;
+    var monthly = outputEl.textContent;
+
+    var subject = encodeURIComponent('Demande de simulation de financement — SIREN ' + siren);
+    var body = encodeURIComponent(
+      'Nouvelle demande de simulation\n\n' +
+      "Type d'actif : " + type + '\n' +
+      'Valeur d\'acquisition : ' + value + ' € HT\n' +
+      'Durée : ' + months + ' mois\n' +
+      'Loyer mensuel estimé : ' + monthly + ' € HT / mois\n\n' +
+      'Email : ' + email + '\n' +
+      'SIREN : ' + siren
+    );
+    window.location.href = 'mailto:lu.cebral@gmail.com?subject=' + subject + '&body=' + body;
+
+    form.style.display = 'none';
+    confirmEl.style.display = 'block';
+  });
+
+  /* ---- ESPACE DISTRIBUTEUR ---- */
+  var ctaFinalRowD = document.getElementById('cta-final-row-d');
+  var ctaFinalBtnD = document.getElementById('cta-final-btn-d');
+  var ctaWriteBtnD = document.getElementById('cta-write-btn-d');
+  var ctaWriteFormD = document.getElementById('cta-write-form-d');
+  var ctaWriteErrorD = document.getElementById('cta-write-error-d');
+  var ctaWriteConfirmD = document.getElementById('cta-write-confirm-d');
+
+  function openWriteFormD() {
+    ctaFinalRowD.style.display = 'none';
+    ctaWriteFormD.style.display = 'flex';
+  }
+  ctaFinalBtnD.addEventListener('click', openWriteFormD);
+  ctaWriteBtnD.addEventListener('click', openWriteFormD);
+
+  var navDemoBtnD = document.getElementById('nav-demo-btn-d');
+  navDemoBtnD.addEventListener('click', function (e) {
+    e.preventDefault();
+    openWriteFormD();
+    document.getElementById('contact-d').scrollIntoView({ behavior: 'smooth' });
+  });
+
+  ctaWriteFormD.addEventListener('submit', function (e) {
+    e.preventDefault();
+    var email = document.getElementById('cta-write-email-d').value.trim();
+    var siren = document.getElementById('cta-write-siren-d').value.trim();
+    var message = document.getElementById('cta-write-message-d').value.trim();
+
+    if (!/^[0-9]{9}$/.test(siren)) {
+      ctaWriteErrorD.style.display = 'block';
+      return;
+    }
+    ctaWriteErrorD.style.display = 'none';
+
+    var subject = encodeURIComponent('Message de contact — SIREN ' + siren);
+    var body = encodeURIComponent(
+      'Nouveau message de contact\n\n' +
+      'Email : ' + email + '\n' +
+      'SIREN : ' + siren + '\n\n' +
+      'Message :\n' + message
+    );
+    window.location.href = 'mailto:lu.cebral@gmail.com?subject=' + subject + '&body=' + body;
+
+    ctaWriteFormD.style.display = 'none';
+    ctaWriteConfirmD.style.display = 'block';
+  });
+
+  /* ---- SHARED ---- */
+  if (window.location.hash === '#distributeur') {
+    document.body.setAttribute('data-espace', 'distributeur');
+  }
+
+  var header = document.querySelector('header.site');
+  function onScroll() {
+    if (window.scrollY > 8) header.classList.add('scrolled');
+    else header.classList.remove('scrolled');
+  }
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+
+  var revealEls = document.querySelectorAll('.reveal, .reveal-stagger');
+  if (window.matchMedia('(prefers-reduced-motion: no-preference)').matches && 'IntersectionObserver' in window) {
+    var observer = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('in-view');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.15, rootMargin: '0px 0px -60px 0px' });
+    revealEls.forEach(function (el) { observer.observe(el); });
+  } else {
+    revealEls.forEach(function (el) { el.classList.add('in-view'); });
+  }
+})();
+</script>
+
+</body>
+</html>

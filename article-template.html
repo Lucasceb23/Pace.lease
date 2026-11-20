@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- ============================================================
+     ZONE À REMPLIR — SEO / MÉTADONNÉES
+     ============================================================ -->
+<title>[TITRE DE L'ARTICLE — 50-60 caractères] | Pace</title>
+<meta name="description" content="[META DESCRIPTION — 140-160 caractères, résume l'article et donne envie de cliquer]">
+<link rel="canonical" href="https://pace.lease/articles/[nom-fichier-article].html">
+<meta property="og:title" content="[TITRE DE L'ARTICLE] | Pace">
+<meta property="og:description" content="[META DESCRIPTION COURTE POUR PARTAGE SOCIAL]">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://pace.lease/[nom-fichier-article].html">
+<meta property="og:image" content="https://pace.lease/[chemin-image-partage].jpg">
+<meta property="og:locale" content="fr_FR">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="[TITRE DE L'ARTICLE] | Pace">
+<meta name="twitter:description" content="[META DESCRIPTION COURTE POUR PARTAGE SOCIAL]">
+<!-- ============================================================ -->
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700;800&family=Geist+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #fafafa;
+    --white: #ffffff;
+    --ink: #000000;
+    --gray-900: #171717;
+    --gray-700: #444444;
+    --gray-600: #666666;
+    --gray-500: #888888;
+    --line: #eaeaea;
+    --line-2: #e2e2e2;
+    --panel: #fafafa;
+    --green: #0d9153;
+    --radius-sm: 0.5rem;
+    --radius: 0.9rem;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    font-family: 'Geist', Arial, Helvetica, sans-serif;
+    background: var(--bg);
+    color: var(--ink);
+    -webkit-font-smoothing: antialiased;
+  }
+  code, .mono { font-family: 'Geist Mono', ui-monospace, monospace; }
+  ::selection { background: var(--ink); color: #fff; }
+  a { color: inherit; text-decoration: none; }
+  img { max-width: 100%; }
+
+  .wrap { max-width: 1200px; margin: 0 auto; padding: 0 1.5rem; }
+
+  /* NAV */
+  header.site {
+    position: sticky; top: 0; z-index: 50;
+    background: rgba(250,250,250,0.8);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid var(--line);
+    transition: box-shadow .25s ease;
+  }
+  header.site.scrolled { box-shadow: 0 8px 24px rgba(0,0,0,0.05); }
+  .nav {
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 1rem 0;
+  }
+  .logo { display: flex; align-items: center; gap: 0.5rem; font-weight: 600; font-size: 1.05rem; letter-spacing: -0.02em; }
+  .logo .mark {
+    width: 22px; height: 22px; color: var(--ink); flex-shrink: 0;
+    filter: blur(0.6px);
+  }
+  .nav-links { display: flex; gap: 0.25rem; align-items: center; }
+  .nav-links a.pill {
+    font-size: 0.875rem; font-weight: 500; color: var(--gray-600);
+    padding: 0.5rem 0.9rem; border-radius: 999px; transition: all .15s;
+  }
+  .nav-links a.pill:hover { background: #f2f2f2; color: var(--ink); }
+  .nav-cta {
+    background: var(--ink); color: #fff !important;
+    padding: 0.5rem 1.1rem; border-radius: 999px; font-size: 0.85rem; font-weight: 600;
+    margin-left: 0.5rem; transition: background .15s;
+  }
+  .nav-links a.pill.nav-cta:hover { background: #2a2a2a; color: #fff; }
+  @media (max-width: 720px) { .nav-links a.pill:not(.nav-cta) { display: none; } }
+
+  .audience-switch {
+    display: inline-flex; align-items: center; gap: 0.4rem;
+    border: 1px solid var(--line-2); background: var(--white);
+    padding: 0.5rem 1rem; border-radius: 999px; font-size: 0.82rem; font-weight: 600;
+    color: var(--gray-700); transition: background .15s, color .15s;
+  }
+  .audience-switch:hover { background: #f2f2f2; color: var(--ink); }
+  @media (max-width: 640px) {
+    .nav { flex-wrap: wrap; row-gap: 0.6rem; }
+    .audience-switch { order: 3; width: 100%; justify-content: center; }
+  }
+
+  .btn {
+    display: inline-flex; align-items: center; gap: 0.5rem;
+    padding: 0.75rem 1.4rem; border-radius: 999px; font-weight: 600; font-size: 0.92rem;
+    transition: transform .15s, opacity .15s, background .15s;
+    border: none; cursor: pointer; font-family: inherit;
+  }
+  .btn-primary { background: var(--ink); color: #fff; }
+  .btn-primary:hover { opacity: .8; }
+  .btn-secondary { background: var(--white); border: 1px solid var(--line-2); color: var(--ink); }
+  .btn-secondary:hover { background: #f5f5f5; }
+  .btn:hover { transform: translateY(-2px); }
+  .btn:active { transform: translateY(0); }
+
+  @media (prefers-reduced-motion: no-preference) {
+    .reveal { opacity: 0; transform: translateY(22px); transition: opacity .7s cubic-bezier(.16,1,.3,1), transform .7s cubic-bezier(.16,1,.3,1); }
+    .reveal.in-view { opacity: 1; transform: translateY(0); }
+  }
+
+  /* ARTICLE HEADER */
+  .article-hero {
+    padding: 3.5rem 0 2.5rem; position: relative;
+    background-image: radial-gradient(var(--line-2) 1px, transparent 1px);
+    background-size: 22px 22px;
+    background-position: center -10px;
+    -webkit-mask-image: linear-gradient(to bottom, black 0%, black 85%, transparent 100%);
+    mask-image: linear-gradient(to bottom, black 0%, black 85%, transparent 100%);
+  }
+  .article-hero-inner { max-width: 780px; margin: 0 auto; text-align: center; }
+  .kicker {
+    font-family: 'Geist Mono', monospace;
+    font-size: 0.78rem; font-weight: 500; text-transform: uppercase; letter-spacing: 0.06em;
+    color: var(--gray-500); margin-bottom: 0.9rem; display: block;
+  }
+  .article-hero h1 {
+    font-size: clamp(2rem, 4.4vw, 3.1rem);
+    font-weight: 600; letter-spacing: -0.04em; line-height: 1.15;
+    margin: 0 0 1.1rem;
+  }
+  .article-lede {
+    font-size: 1.1rem; color: var(--gray-600); line-height: 1.6; margin: 0 0 1.5rem;
+  }
+  .article-meta {
+    display: flex; align-items: center; justify-content: center; gap: 0.6rem;
+    font-size: 0.85rem; color: var(--gray-500); font-family: 'Geist Mono', monospace;
+  }
+  .article-meta .dot { width: 3px; height: 3px; border-radius: 999px; background: var(--gray-500); }
+
+  /* COVER IMAGE */
+  .article-cover {
+    max-width: 1000px; margin: 0 auto 3rem; padding: 0 1.5rem;
+  }
+  .article-cover img {
+    width: 100%; display: block; border-radius: var(--radius);
+    border: 1px solid var(--line); aspect-ratio: 16/9; object-fit: cover;
+    background: var(--white);
+  }
+  .article-cover figcaption {
+    margin: 0.6rem 0 0; font-size: 0.82rem; color: var(--gray-500); text-align: center;
+  }
+
+  /* ARTICLE BODY / PROSE */
+  .article-body { max-width: 720px; margin: 0 auto; padding: 0 1.5rem 4rem; }
+  .article-content { font-size: 1.05rem; line-height: 1.75; color: var(--gray-700); }
+  .article-content h2 {
+    font-size: clamp(1.4rem, 2.6vw, 1.7rem); font-weight: 600; letter-spacing: -0.02em;
+    color: var(--ink); margin: 2.4rem 0 1rem; line-height: 1.25;
+  }
+  .article-content h3 {
+    font-size: 1.2rem; font-weight: 600; letter-spacing: -0.01em;
+    color: var(--ink); margin: 1.8rem 0 0.8rem;
+  }
+  .article-content p { margin: 0 0 1.3rem; }
+  .article-content ul, .article-content ol { margin: 0 0 1.3rem; padding-left: 1.4rem; }
+  .article-content li { margin-bottom: 0.5rem; }
+  .article-content a { color: var(--ink); text-decoration: underline; text-underline-offset: 2px; }
+  .article-content strong { color: var(--ink); font-weight: 600; }
+  .article-content blockquote {
+    margin: 1.8rem 0; padding: 1rem 1.4rem; border-left: 3px solid var(--ink);
+    background: var(--white); border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+    color: var(--gray-700); font-style: italic;
+  }
+  .article-content img {
+    border-radius: var(--radius-sm); border: 1px solid var(--line); margin: 0.5rem 0 0.4rem;
+  }
+  .article-content figcaption { font-size: 0.82rem; color: var(--gray-500); margin-bottom: 1.6rem; }
+  .article-content hr { border: none; border-top: 1px solid var(--line); margin: 2.5rem 0; }
+  .article-content .table-wrap { overflow-x: auto; margin: 0 0 1.6rem; border: 1px solid var(--line); border-radius: var(--radius-sm); }
+  .article-content table { width: 100%; border-collapse: collapse; font-size: 0.92rem; background: var(--white); }
+  .article-content th, .article-content td { padding: 0.65rem 0.9rem; text-align: left; border-bottom: 1px solid var(--line); }
+  .article-content th { font-weight: 600; color: var(--ink); background: var(--panel); font-size: 0.85rem; }
+  .article-content tr:last-child td { border-bottom: none; }
+  .article-content td strong { font-weight: 600; }
+
+  /* CTA WITHIN ARTICLE */
+  .article-cta {
+    background: var(--white); border: 1px solid var(--line); border-radius: var(--radius);
+    padding: 2rem; text-align: center; margin: 2.5rem 0;
+  }
+  .article-cta h3 { margin: 0 0 0.6rem; font-size: 1.15rem; }
+  .article-cta p { color: var(--gray-600); font-size: 0.95rem; margin: 0 0 1.3rem; }
+
+  /* FOOTER */
+  footer {
+    border-top: 1px solid var(--line); padding: 2.5rem 0;
+  }
+  .footer-row {
+    display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;
+  }
+  .footer-links { display: flex; gap: 1.5rem; font-size: 0.85rem; color: var(--gray-500); }
+  .footer-links a:hover { color: var(--ink); }
+  .footer-fine { font-size: 0.8rem; color: var(--gray-500); margin-top: 1.5rem; font-family: 'Geist Mono', monospace; }
+</style>
+
+<!-- ============================================================
+     ZONE À REMPLIR — DONNÉES STRUCTURÉES (SEO)
+     Adapter datePublished / dateModified / author / image
+     ============================================================ -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "[TITRE DE L'ARTICLE]",
+  "description": "[META DESCRIPTION]",
+  "image": "https://pace.lease/[chemin-image-partage].jpg",
+  "datePublished": "[AAAA-MM-JJ]",
+  "dateModified": "[AAAA-MM-JJ]",
+  "author": { "@type": "Organization", "name": "Pace" },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Pace",
+    "url": "https://pace.lease"
+  },
+  "mainEntityOfPage": "https://pace.lease/[nom-fichier-article].html"
+}
+</script>
+<!-- ============================================================ -->
+
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap nav">
+    <a href="../index.html" class="logo"><svg class="mark" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><polygon points="12,2 20.66,7 20.66,17 12,22 3.34,17 3.34,7" stroke="currentColor" stroke-width="3.5" stroke-linejoin="round"/></svg>Pace</a>
+    <a href="../index.html#distributeur" class="audience-switch">Espace distributeur <span aria-hidden="true">→</span></a>
+    <nav class="nav-links">
+      <a class="pill" href="../index.html#comment-ca-marche">Comment ça marche</a>
+      <a class="pill" href="../index.html#avantages">Avantages</a>
+      <a class="pill" href="../index.html#simulateur">Simulateur</a>
+      <a class="pill nav-cta" href="../index.html#contact">Demander une démo</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+  <!-- ============================================================
+       ZONE À REMPLIR — EN-TÊTE DE L'ARTICLE
+       ============================================================ -->
+  <section class="article-hero">
+    <div class="wrap article-hero-inner reveal">
+      <span class="kicker">// [CATÉGORIE, ex : financement d'équipement]</span>
+      <h1>[TITRE DE L'ARTICLE]</h1>
+      <p class="article-lede">[CHAPÔ / RÉSUMÉ — 1-2 phrases qui donnent envie de lire la suite]</p>
+      <div class="article-meta">
+        <span>[JJ mois AAAA]</span>
+        <span class="dot" aria-hidden="true"></span>
+        <span>[X min de lecture]</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ZONE À REMPLIR — IMAGE DE COUVERTURE -->
+  <figure class="wrap article-cover">
+    <img src="[chemin-image-couverture].jpg" alt="[TEXTE ALTERNATIF DÉCRIVANT L'IMAGE]">
+    <figcaption>[LÉGENDE DE L'IMAGE — optionnel]</figcaption>
+  </figure>
+
+  <!-- ============================================================
+       ZONE À REMPLIR — CONTENU DE L'ARTICLE
+       Remplacer les paragraphes ci-dessous par le texte réel.
+       Structure disponible : h2, h3, p, ul/ol, blockquote, img, hr
+       ============================================================ -->
+  <div class="wrap article-body">
+    <article class="article-content reveal">
+
+      <p>[Paragraphe d'introduction — pose le contexte et le problème que l'article va traiter.]</p>
+
+      <h2>[Titre de section 1]</h2>
+      <p>[Contenu de la section 1.]</p>
+
+      <h2>[Titre de section 2]</h2>
+      <p>[Contenu de la section 2.]</p>
+      <ul>
+        <li>[Point clé 1]</li>
+        <li>[Point clé 2]</li>
+        <li>[Point clé 3]</li>
+      </ul>
+
+      <!-- CTA optionnel à insérer au milieu de l'article -->
+      <div class="article-cta">
+        <h3>[Accroche CTA, ex : Simulez votre financement en 30 secondes]</h3>
+        <p>[Phrase d'appui courte]</p>
+        <a href="../index.html#simulateur" class="btn btn-primary">[Texte du bouton]</a>
+      </div>
+
+      <h2>[Titre de section 3]</h2>
+      <p>[Contenu de la section 3.]</p>
+
+      <h2>Conclusion</h2>
+      <p>[Paragraphe de conclusion — synthèse et prochaine étape suggérée au lecteur.]</p>
+
+    </article>
+  </div>
+  <!-- ============================================================ -->
+
+</main>
+
+<footer>
+  <div class="wrap footer-row">
+    <a href="../index.html" class="logo"><svg class="mark" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><polygon points="12,2 20.66,7 20.66,17 12,22 3.34,17 3.34,7" stroke="currentColor" stroke-width="3.5" stroke-linejoin="round"/></svg>Pace</a>
+    <div class="footer-links">
+      <a href="../index.html#comment-ca-marche">Comment ça marche</a>
+      <a href="../index.html#avantages">Avantages</a>
+      <a href="../index.html#simulateur">Simulateur</a>
+      <a href="mailto:lu.cebral@gmail.com">Contact</a>
+    </div>
+  </div>
+  <div class="wrap footer-fine">© 2026 Pace — Solution de financement locatif pour entreprises</div>
+</footer>
+
+<script>
+(function(){
+  var header = document.querySelector('header.site');
+  function onScroll() {
+    if (window.scrollY > 8) header.classList.add('scrolled');
+    else header.classList.remove('scrolled');
+  }
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+
+  var revealEls = document.querySelectorAll('.reveal');
+  if (window.matchMedia('(prefers-reduced-motion: no-preference)').matches && 'IntersectionObserver' in window) {
+    var observer = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('in-view');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.15, rootMargin: '0px 0px -60px 0px' });
+    revealEls.forEach(function (el) { observer.observe(el); });
+  } else {
+    revealEls.forEach(function (el) { el.classList.add('in-view'); });
+  }
+})();
+</script>
+
+</body>
+</html>
